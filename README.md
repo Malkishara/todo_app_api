@@ -1,17 +1,17 @@
 # todo_app_api
 
 ## Authentication Endpoints
-URL: http://localhost:5000/api/authenticate
-Method: POST
-Description: Authenticates a user and returns a JWT token with user details
+URL: http://localhost:5000/api/authenticate ,
+Method: POST ,
+Description: Authenticates a user and returns a JWT token with user details, 
 Request Body: {
   "email": "user@example.com",
   "password": "password123"
 }
 
 ## User Endpoints
-URL: http://localhost:5000/api/signup
-Method: POST
+URL: http://localhost:5000/api/signup ,
+Method: POST ,
 Description: Registers a new user and returns a JWT token.
 Request Body: {
   "email": "user@example.com",
@@ -19,10 +19,10 @@ Request Body: {
   "name": "John Doe"
 }
 
-##ToDo Endpoints
+## ToDo Endpoints
 
-URL: http://localhost:5000/api/todo
-Method: POST
+URL: http://localhost:5000/api/todo ,
+Method: POST ,
 Description: Creates a new to-do item for the authenticated user.
 Headers: Requires JWT token in the Authorization header.
 Request Body: {
@@ -32,8 +32,8 @@ Request Body: {
     "priority":4    
 }
 
-URL: http://localhost:5000/api/todo
-Method: PUT
+URL: http://localhost:5000/api/todo ,
+Method: PUT ,
 Description: Updates an existing to-do item.
 Headers: Requires JWT token in the Authorization header.
 Request Body: {
@@ -45,24 +45,24 @@ Request Body: {
     "completed":true    
 }
 
-URL: http://localhost:5000/api/todo/{id}
-Method: GET
+URL: http://localhost:5000/api/todo/{id} ,
+Method: GET ,
 Description: Retrieves a to-do item by its ID.
 Headers: Requires JWT token in the Authorization header.
 
-URL: http://localhost:5000/api/todo
-Method: GET
+URL: http://localhost:5000/api/todo ,
+Method: GET ,
 Description: Retrieves all to-do items of the authenticated user, with optional pagination and sorting.
 Headers: Requires JWT token in the Authorization header.
 Query Parameters: page, size, sortBy, direction, search
 
-URL: http://localhost:5000/api/todo/{id}
-Method: DELETE
+URL: http://localhost:5000/api/todo/{id} ,
+Method: DELETE ,
 Description: Deletes a to-do item by its ID.
 Headers: Requires JWT token in the Authorization header.
 
-URL: http://localhost:5000/api/todo/{id}/completion-status
-Method: PUT
+URL: http://localhost:5000/api/todo/{id}/completion-status ,
+Method: PUT ,
 Description: Updates the completion status of a to-do item.
 Headers: Requires JWT token in the Authorization header.
 Query Parameters:isCompleted
